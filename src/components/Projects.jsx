@@ -40,7 +40,7 @@ const ProjectCard = ({
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
         whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
+        absolute  lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
         leading-none z-20">
             {name}
           </h3>
@@ -124,7 +124,7 @@ const Projects = () => {
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-          In my portfolio, you'll find projects that demonstrate my commitment to learning and my enthusiasm for frontend development. These projects are stepping stones in my journey, showcasing my dedication to building responsive and visually appealing web applications.
+          In my portfolio, you&apos;ll find projects that demonstrate my commitment to learning and my enthusiasm for frontend development. These projects are stepping stones in my journey, showcasing my dedication to building responsive and visually appealing web applications.
         </motion.p>
       </div>
 

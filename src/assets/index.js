@@ -31,6 +31,8 @@ import typescript from "./tech/typescript.png";
 import nextjs from "./tech/nextjs.png";
 import bootstrap from "./tech/bootstrap.png";
 import antd from "./tech/ant-design.svg";
+import vitejs from "./tech/vitejs.svg";
+import mui from "./tech/mui.svg";
 
 import topskill from "./company/topskill-modified.png";
 
@@ -48,7 +50,6 @@ export {
   logotext,
   resumePhoto,
   frontend,
-  github,
   close,
   download,
   downloadHover,
@@ -62,12 +63,15 @@ export {
   sass,
   nextjs,
   git,
+  mui,
   html,
   javascript,
   reactjs,
   antd,
   tailwind,
   bootstrap,
+  vitejs,
+  github,
   typescript,
   golobe,
   topskillDashboard,

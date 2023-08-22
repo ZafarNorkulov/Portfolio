@@ -6,6 +6,7 @@ import { styles } from '../styles';
 import { textVariant } from '../utils/motion';
 
 const Tech = () => {
+  
   return (
     <>
       <motion.div variants={textVariant()}>

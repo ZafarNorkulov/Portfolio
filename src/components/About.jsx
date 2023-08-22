@@ -31,7 +31,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-       I'm an aspiring Frontend Developer with a passion for creating beautiful and user-friendly web experiences. My fascination with the ever-evolving world of web technologies led me to start my career in this exciting field.
+       I&apos;m an aspiring Frontend Developer with a passion for creating beautiful and user-friendly web experiences. My fascination with the ever-evolving world of web technologies led me to start my career in this exciting field.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

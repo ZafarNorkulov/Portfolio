@@ -11,6 +11,8 @@ import {
   bootstrap,
   nextjs,
   antd,
+  vitejs,
+  mui,
   golobe,
   topskillDashboard,
   stiTransportation,
@@ -61,26 +63,34 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  // {
-  //   name: 'Ant Design',
-  //   icon: antd,
-  // },
-  {
-    name: 'Next JS',
-    icon: nextjs,
+    name: 'Tailwind CSS',
+    icon: tailwind,
   },
   {
     name: 'React JS',
     icon: reactjs,
   },
-
   {
-    name: 'Tailwind CSS',
-    icon: tailwind,
+    name: 'Material UI',
+    icon: mui,
   },
+  {
+    name: 'Vite JS',
+    icon: vitejs,
+  },
+  {
+      name: 'Ant Design',
+      icon: antd,
+    },
+    {
+      name: 'Next JS',
+      icon: nextjs,
+    },
+    {
+      name: 'TypeScript',
+      icon: typescript,
+    },
+
  
   {
     name: 'git',
