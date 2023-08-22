@@ -26,11 +26,11 @@ const Navbar = () => {
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
           />
      
-          <span className="sm:text-battleGray sm:text-[30px] 
-                text-eerieBlack text-[50px] font-mova
+          <span className="sm:text-battleGray sm:text-[30px]  
+                text-eerieBlack lg:text-[36px] md:text-4xl text-2xl font-mova
                 font-extrabold uppercase">Zafar</span>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
+        <ul className="list-none hidden md:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -39,13 +39,13 @@ const Navbar = () => {
               } hover:text-taupe text-[21px] font-medium font-mova 
                 uppercase tracking-[3px] cursor-pointer nav-links`}
               onClick={() => setActive(nav.title)}>
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`/#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
         {/* mobile */}
-        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
+        <div className="md:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
             <div
               className={`p-6 bg-flashWhite opacity-[0.98] absolute 

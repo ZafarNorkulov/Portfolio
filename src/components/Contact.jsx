@@ -7,56 +7,32 @@ import { slideIn } from '../utils/motion';
 import { send, sendHover } from '../assets';
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
+  const form = useRef();
+  const [formContent, setFormContent] = useState({
+    to_name: '',
     message: '',
-  });
+  })
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm({ ...form, [name]: value });
+    setFormContent({ ...formContent, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // sign up on emailjs.com (select the gmail service and connect your account).
-    //click on create a new template then click on save.
-    emailjs
-      .send(
-        'serviceID', // paste your ServiceID here (you'll get one when your service is created).
-        'templateID', // paste your TemplateID here (you'll find it under email templates).
-        {
-          from_name: form.name,
-          to_name: 'YourName', // put your name here.
-          from_email: form.email,
-          to_email: 'youremail@gmail.com', //put your email here.
-          message: form.message,
-        },
-        'yourpublickey' //paste your Public Key here. You'll get it in your profile section.
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
-
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert('Something went wrong. Please try again.');
-        }
-      );
+    emailjs.sendForm('service_viry7jz', 'template_eo7lnjy', form.current, 'N01Bz61B4uc9HwQZe')
+      .then(() => {
+          setLoading(false)
+          setFormContent({
+    to_name: '',
+    message: '',
+  })
+      });
   };
 
   return (
@@ -70,15 +46,17 @@ const Contact = () => {
         <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
 
         <form
-          ref={formRef}
+          ref={form}
           onSubmit={handleSubmit}
+
           className="mt-10 flex flex-col gap-6 font-poppins">
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">Your Name</span>
             <input
+            required
               type="text"
-              name="name"
-              value={form.name}
+              name="to_name"
+              value={formContent.to_name}
               onChange={handleChange}
               placeholder="What's your name?"
               className="bg-eerieBlack py-4 px-6
@@ -87,28 +65,16 @@ const Contact = () => {
               border-none font-medium"
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email?"
-              className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium"
-            />
-          </label>
+         
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">
               Your Message
             </span>
             <textarea
+            required
               rows="7"
               name="message"
-              value={form.message}
+              value={formContent.message}
               onChange={handleChange}
               placeholder="What's your message?"
               className="bg-eerieBlack py-4 px-6
