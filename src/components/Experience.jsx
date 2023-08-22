@@ -9,7 +9,9 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
-
+import { useContext } from 'react';
+import {MainContext} from "../constants/context"
+import { Link } from 'react-router-dom';
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
@@ -52,6 +54,7 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const Experience = () => {
+  const {resumeStatus,setResumeStatus} = useContext(MainContext)
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -91,6 +94,7 @@ const Experience = () => {
                 />
               </div>
             }>
+            <Link to={"/resume"}>
             <button
               className="live-demo flex justify-between 
               sm:text-[18px] text-[14px] text-timberWolf 
@@ -100,12 +104,7 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() =>
-                window.open(
-                  'resume link', //paste the link to your resume here
-                  '_blank'
-                )
-              }
+              onClick={() => setResumeStatus(true)}
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
@@ -124,6 +123,7 @@ const Experience = () => {
                 w-[23px] h-[23px] object-contain"
               />
             </button>
+            </Link>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
