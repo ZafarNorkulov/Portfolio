@@ -4,7 +4,6 @@ import whiteabstract from "./backgrounds/white-abstract.png";
 import worldmap from "./backgrounds/world-map.png";
 
 import logo from "./logo/logo-black.png";
-import logotext from "./logo/logo-text-black.png";
 
 import resumePhoto from "./personal/resume.png";
 
@@ -21,7 +20,7 @@ import send from "./icons/send.png";
 import sendHover from "./icons/sendHover.png";
 
 import css from "./tech/css.png";
-import sass from "./tech/white.png"
+import sass from "./tech/white.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -47,7 +46,6 @@ export {
   whiteabstract,
   worldmap,
   logo,
-  logotext,
   resumePhoto,
   frontend,
   close,

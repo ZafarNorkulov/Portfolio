@@ -1,4 +1,3 @@
-import React from 'react'
 import { About, Contact, Experience, Hero, Navbar, Projects, Tech } from '../components'
 
 const Home = () => {
